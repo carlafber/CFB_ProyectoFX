@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carla_delafuentebernardino_proyectofx.TicketController">
+   <children>
+      <AnchorPane prefHeight="329.0" prefWidth="475.0">
+         <children>
+            <Text layoutX="185.0" layoutY="44.0" text="GimShop">
+               <font>
+                  <Font name="Gill Sans Nova Cond XBd" size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="203.0" layoutY="76.0" text="Su ticket:">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="76.0" layoutY="121.0" text="Producto:">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="txt_producto" layoutX="189.0" layoutY="102.0" prefHeight="25.0" prefWidth="240.0">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="76.0" layoutY="159.0" text="Precio:">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="txt_precio" layoutX="189.0" layoutY="140.0" prefHeight="25.0" prefWidth="240.0">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="75.0" layoutY="197.0" text="Cantidad:">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="txt_total" layoutX="191.0" layoutY="218.0" prefHeight="25.0" prefWidth="240.0">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="75.0" layoutY="237.0" text="Total:">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="20.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cb_cantidad" layoutX="191.0" layoutY="175.0" prefWidth="150.0" />
+            <Button fx:id="bt_salir" layoutX="70.0" layoutY="270.0" mnemonicParsing="false" onAction="#onSalirClick" text="Salir">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bt_volver" layoutX="348.0" layoutY="270.0" mnemonicParsing="false" onAction="#onVolverClick" text="Volver">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bt_confirmar" layoutX="189.0" layoutY="270.0" mnemonicParsing="false" onAction="#onConfirmarClick" text="Confirmar">
+               <font>
+                  <Font name="Gill Sans Nova Light" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
