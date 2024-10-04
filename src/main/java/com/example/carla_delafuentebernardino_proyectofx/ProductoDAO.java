@@ -26,7 +26,6 @@ public class ProductoDAO {
                 }
             }
         } catch (SQLException e) {
-            System.out.printf(e.getMessage());
             Alerta.mensajeError(e.getMessage());
         }
         return producto;
@@ -43,7 +42,6 @@ public class ProductoDAO {
             statement.executeUpdate();
 
         } catch (SQLException e) {
-            System.out.printf(e.getMessage());
             Alerta.mensajeError(e.getMessage());
         }
     }
