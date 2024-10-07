@@ -113,9 +113,10 @@ public class TicketController {
             cb_cantidad.setValue(0);
         }
 
-        cb_cantidad.valueProperty().addListener((observable, oldValue, newValue) -> {
+        cb_cantidad.valueProperty().addListener(event -> {
             txt_total.setText(calcularTotal(producto.getPrecio()) + "€");
         });
+
         if(cb_cantidad.getItems().isEmpty()){
             Alerta.mensajeError("No hay cantidad del producto.");
         }
@@ -131,5 +132,4 @@ public class TicketController {
         }
         return total;
     }
-
 }

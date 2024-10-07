@@ -15,7 +15,6 @@ public class ProductoDAO {
         Producto producto = null;
         String sql = "SELECT * FROM producto WHERE id = ?";
 
-
         try {
             Connection connection = Conectar.conectar(); //Conectar a la bbdd
             PreparedStatement statement = connection.prepareStatement(sql); //Preparar la consulta SQL
