@@ -56,8 +56,8 @@ public class TicketController {
             alert.setTitle("CONFIRMACIÓN");
             alert.setHeaderText(null);
             alert.setContentText("El pedido se va a confirmar, asegúrate de que los datos son correctos.");
-            alert.showAndWait().ifPresent(response -> {
-                if (response == ButtonType.OK) {
+            alert.showAndWait().ifPresent(respuesta -> {
+                if (respuesta == ButtonType.OK) {
                     if(PedidoDAO.anadir(producto, pedido)){
                         Alerta.mensajeInfo("ÉXITO", "Pedido realizado correctamente.");
 
