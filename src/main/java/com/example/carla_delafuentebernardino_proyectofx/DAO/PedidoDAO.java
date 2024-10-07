@@ -5,6 +5,7 @@ import com.example.carla_delafuentebernardino_proyectofx.classes.Producto;
 import com.example.carla_delafuentebernardino_proyectofx.util.Alerta;
 import com.example.carla_delafuentebernardino_proyectofx.util.Conectar;
 
+import java.io.IOException;
 import java.sql.*;
 
 public class PedidoDAO {
@@ -31,6 +32,10 @@ public class PedidoDAO {
         } catch (SQLException e) {
             Alerta.mensajeError(e.getMessage());
             return false;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
 
     }

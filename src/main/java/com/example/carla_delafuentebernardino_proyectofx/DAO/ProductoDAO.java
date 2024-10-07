@@ -4,6 +4,7 @@ import com.example.carla_delafuentebernardino_proyectofx.classes.Producto;
 import com.example.carla_delafuentebernardino_proyectofx.util.Alerta;
 import com.example.carla_delafuentebernardino_proyectofx.util.Conectar;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,6 +14,7 @@ public class ProductoDAO {
     public static Producto obtener(int id) {
         Producto producto = null;
         String sql = "SELECT * FROM producto WHERE id = ?";
+
 
         try {
             Connection connection = Conectar.conectar(); //Conectar a la bbdd
@@ -31,6 +33,10 @@ public class ProductoDAO {
             }
         } catch (SQLException e) {
             Alerta.mensajeError(e.getMessage());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
         return producto;
     }
@@ -47,6 +53,10 @@ public class ProductoDAO {
 
         } catch (SQLException e) {
             Alerta.mensajeError(e.getMessage());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 }
