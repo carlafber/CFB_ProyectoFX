@@ -32,9 +32,7 @@ public class ProductoDAO {
             }
         } catch (SQLException e) {
             Alerta.mensajeError(e.getMessage());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
         return producto;
@@ -52,9 +50,7 @@ public class ProductoDAO {
 
         } catch (SQLException e) {
             Alerta.mensajeError(e.getMessage());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
